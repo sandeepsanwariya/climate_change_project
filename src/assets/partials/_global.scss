@@ -1,0 +1,127 @@
+@mixin hidden() {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -9999;
+    height: 0px;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+@mixin visible() {
+    visibility: visible;
+    opacity: 1;
+    z-index: 9;
+    height: auto;
+    overflow: visible;
+}
+
+// Standard page/post/category header: This is used on the single post and on the category
+.entry-header, .category-header {
+    padding: var(--padding);
+    padding-top: 18vh;
+
+    h1 {
+        @include headline;
+    }
+}
+
+// These are used in the article entry header and in the article list
+.category-link, .publish-date {
+    font-size: 1.8rem;
+    margin-right: var(--padding-small);
+    margin-bottom: var(--padding-small);
+    display: inline-block;
+}
+
+
+
+* {
+    max-width: 100%;
+}
+body {
+    padding: $gutter;
+}
+
+.close {
+    position: absolute;
+    right: var(--padding-small);
+    top: var(--padding-small);
+    width: 3rem;
+    height: 3rem;
+    text-indent: -5000px;
+
+    &:before, &:after {
+        content: "";
+        transform: rotate(45deg);
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 3rem;
+        height: 0.2rem;
+        background: $primary;
+    }
+    &:after {
+        transform: rotate(-45deg);
+    }
+}
+
+.share {
+    h3 {
+        color: $light-text;
+        @include headline;
+    }
+
+    ul {
+        li {
+            display: inline-block;
+            margin-right: var(--padding-small);
+
+            a {
+                display: block;
+                background: url('../assets/img/social-icons.webp');
+                background-position: 0 bottom;
+                background-size: 160px;
+                width: 40px;
+                height: 40px;
+                text-indent: -5000px;
+                overflow: hidden;
+            }
+            &.twitter {
+
+                a {
+                    background-position: -40px bottom;
+                }
+            }
+            &.facebook {
+
+                a {
+                    background-position: -80px bottom;
+                }
+            }
+            &.linkedin {
+
+                a {
+                    background-position: -120px bottom;
+                }
+            }
+        }
+    }
+}
+
+// Old Lazy load
+/*
+.hqy-lazy {
+    opacity:0;
+    transform: scale(3);
+    transition: all 500ms;
+}
+.hqy-loaded {
+    opacity:1;
+    transform: scale(1);
+}
+*/
+
+
+.site-footer {
+    padding: var(--padding-small);
+}

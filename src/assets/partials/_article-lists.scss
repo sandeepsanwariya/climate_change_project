@@ -1,0 +1,42 @@
+// Article Lists
+
+.article-list {
+
+    li {
+        padding-bottom: var(--padding);
+
+        figure {
+
+        }
+        h3 {
+            margin: 0;
+        }
+    }
+}
+
+@media (min-width: $tablet) {
+    .article-list {
+
+        li {
+            figure {
+                padding-right: $text-margin;
+            }
+            h3 {
+                @include headline;
+            }
+        }
+    }
+}
+@media (min-width: $laptop) {
+    .article-list {
+
+        li {
+            figure {
+    
+            }
+            h3 {
+    
+            }
+        }
+    }
+}

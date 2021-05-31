@@ -171,7 +171,7 @@
 
           var tileSize = 256;
 
-          var map = L.map('map').setView([51.505, -0.09], 5);
+          var map = L.map('map').setView([45,45], 3);
 
           var mapboxAccessToken = 'pk.eyJ1Ijoic2FuZGVlcHNhbndhcml5YSIsImEiOiJja3A4ZmhvdGIwMTIyMm5zM2RxNWIya3h5In0.yuJS_cus0cl5UdGeQ-E5kg';
 
@@ -187,6 +187,7 @@
                   fragmentShader: fragmentShader0,
                   tileUrls: ['https://{s}.tiles.mapbox.com/v4/mapbox.terrain-rgb/{z}/{x}/{y}.pngraw?access_token=' + 'pk.eyJ1Ijoic2FuZGVlcHNhbndhcml5YSIsImEiOiJja3A4ZmhvdGIwMTIyMm5zM2RxNWIya3h5In0.yuJS_cus0cl5UdGeQ-E5kg']
                   }).addTo(map);
+                  
               }
               else if(cl==1)
               {
