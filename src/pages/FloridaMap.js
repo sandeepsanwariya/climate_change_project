@@ -13,10 +13,10 @@ function FloridaMap() {
             document.body.removeChild(script);
           }
         
-      }, []);
+      },);
     return (
         <div>
-            <div id="florida_map" style = {{height:'600px',width:"100%",maxHeight: "120%"}}></div>
+            <div id="florida_map" style = {{height:'90vh',width:"100%",maxHeight: "120%"}}></div>
         </div>
     )
 }

@@ -17,7 +17,7 @@ function UAEMap() {
     return (
 
         <div>
-            <div id="uae_map" style = {{height:'600px',width:"100%",maxHeight: "120%"}}></div>
+            <div id="uae_map" style = {{height:'90vh',width:"100%",maxHeight: "120%"}}></div>
         </div>
     )
 }

@@ -54,8 +54,9 @@ const ClimateChange= () => {
           <div className="feature-chart">
                 <div className="chart" style={{padding:0}}>
                     {/* <p>Sea leve rise map will go here</p> */}
-                    
+                    <LazyLoad>
                     <World/>
+                    </LazyLoad>
                    
                 </div>
                 <div className="embed-chart">

@@ -16,7 +16,7 @@ function BangkokMap() {
       }, []);
     return (
         <div>
-            <div id="bangkok_map" style = {{height:'600px',width:"100%",maxHeight: "120%"}}></div>
+            <div id="bangkok_map" style = {{height:'90vh',width:"100%",maxHeight: "120%"}}></div>
         </div>
     )
 }
