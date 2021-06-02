@@ -1,6 +1,6 @@
 import React from 'react'
 import {useEffect} from 'react'
-
+//import "./world.css"
 function World() {
     useEffect(() => {
         const script = document.createElement('script');
@@ -14,10 +14,16 @@ function World() {
           }
         
       },);
-    return (
+    return (<>
         <div>
              <div id="map" style = {{height:'700px',width:"110%"}}></div>
+             
         </div>
+        <div className="slidecontainer">
+        <input type="range" min="0" max="143.7"  step="0.3" value="0"   style={{width: "30em"}}  className="slider" id="range"/>
+        <p>Year: <span id="demo"></span></p>
+      </div>
+      </>
     )
 }
 
