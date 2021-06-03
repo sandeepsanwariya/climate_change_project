@@ -39,7 +39,9 @@ void main(void) {
 		}).addTo(map);
 		
 
-
+        var start = document.getElementById("start");
+        var pause = document.getElementById("pause");
+        pause.disabled=true;
 		var slider = document.getElementById("range");
         slider.value=0;
 		var output = document.getElementById("demo");
@@ -58,7 +60,7 @@ void main(void) {
 
             document.getElementById('range').value =cl;
             year=year+1;
-            output.innerHTML =year
+            output.innerHTML =2021+(cl/0.3)
             
             if(year==2500){
                 console.log('year',cl)
@@ -74,6 +76,18 @@ void main(void) {
         antitoner.redraw()
         antitoner.setUniform('elevation', this.value);
         antitoner.reRender();
+        pause.disabled=true;
+                start.disabled=false;
         clearInterval(interval_id);
         }
-        interval_id = setInterval(ant,200);
+        
+        start.onclick=function() {
+            interval_id = setInterval(ant,200);
+            this.disabled=true;
+            pause.disabled=false;
+          }
+        pause.onclick=function(){
+            clearInterval(interval_id)
+            this.disabled=true;
+            start.disabled=false;
+            }
