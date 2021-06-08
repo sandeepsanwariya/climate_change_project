@@ -20,7 +20,7 @@ void main(void) {
 
 		var tileSize = 256;
 		
-		var map = L.map('haiti_map').setView([19.0558462, -73.0513321], 11);
+		var map = L.map('haiti_map').setView([19.0558462, -73.0513321], 10);
 
 		var mapboxAccessToken = 'pk.eyJ1Ijoic2FuZGVlcHNhbndhcml5YSIsImEiOiJja3A4ZmhvdGIwMTIyMm5zM2RxNWIya3h5In0.yuJS_cus0cl5UdGeQ-E5kg';
 
@@ -45,8 +45,8 @@ void main(void) {
 		var slider = document.getElementById("range");
         slider.value=0;
 		var output = document.getElementById("demo");
-        let year=2021
-		output.innerHTML = year
+        
+		output.innerHTML = 2021
 		function ant(){
             var cl = Number(document.getElementById('range').value);
             
@@ -59,12 +59,10 @@ void main(void) {
             }
 
             document.getElementById('range').value =cl;
-            year=year+1;
+            
             output.innerHTML =2021+(cl/0.3)
             
-            if(year==2500){
-                console.log('year',cl)
-            }
+           
             antitoner.setUniform('elevation', cl);
             antitoner.reRender();
             console.log(cl)

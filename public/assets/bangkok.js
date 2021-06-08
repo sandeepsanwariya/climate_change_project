@@ -60,12 +60,10 @@ void main(void) {
             }
 
             document.getElementById('range').value =cl;
-            year=year+1;
+           
             output.innerHTML =2021+(cl/0.3)
             
-            if(year==2500){
-                console.log('year',cl)
-            }
+            
             antitoner.setUniform('elevation', cl);
             antitoner.reRender();
             console.log(cl)

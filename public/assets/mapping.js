@@ -20,7 +20,7 @@ void main(void) {
 
 		var tileSize = 256;
 		
-		var map = L.map('map').setView([45,45], 3);
+		var map = L.map('map').setView([0,0], 3);
 
 		var mapboxAccessToken = 'pk.eyJ1Ijoic2FuZGVlcHNhbndhcml5YSIsImEiOiJja3A4ZmhvdGIwMTIyMm5zM2RxNWIya3h5In0.yuJS_cus0cl5UdGeQ-E5kg';
 
@@ -28,7 +28,7 @@ void main(void) {
 			attribution: 'Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy;<a href="https://www.mapbox.com/map-feedback/">Mapbox</a>',
 			id: 'mapbox.streets'
 		}).addTo(map);
-
+        
 		var antitoner = L.tileLayer.gl({
 			uniforms: {
 				elevation: Number(document.getElementById('range').value),
@@ -38,6 +38,7 @@ void main(void) {
 			tileUrls: ['https://{s}.tiles.mapbox.com/v4/mapbox.terrain-rgb/{z}/{x}/{y}.pngraw?access_token=' + 'pk.eyJ1Ijoic2FuZGVlcHNhbndhcml5YSIsImEiOiJja3A4ZmhvdGIwMTIyMm5zM2RxNWIya3h5In0.yuJS_cus0cl5UdGeQ-E5kg']
 		}).addTo(map);
 		
+        
 
         var start = document.getElementById("start");
         var pause = document.getElementById("pause");
@@ -45,8 +46,8 @@ void main(void) {
 		var slider = document.getElementById("range");
         slider.value=0;
 		var output = document.getElementById("demo");
-        let year=2021
-		output.innerHTML = year
+        
+		output.innerHTML = 2021
 		function ant(){
             var cl = Number(document.getElementById('range').value);
             
@@ -59,12 +60,10 @@ void main(void) {
             }
 
             document.getElementById('range').value =cl;
-            year=year+1;
+            
             output.innerHTML =2021+(cl/0.3)
             
-            if(year==2500){
-                console.log('year',cl)
-            }
+            
             antitoner.setUniform('elevation', cl);
             antitoner.reRender();
             console.log(cl)
@@ -91,3 +90,5 @@ void main(void) {
             this.disabled=true;
             start.disabled=false;
             }
+
+        

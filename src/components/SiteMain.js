@@ -13,7 +13,7 @@ import KolkataMap from "../pages/KolkataMap"
 import BangkokMap from "../pages/BangkokMap"
 import BangladeshMap from "../pages/BangladeshMap"
 import UAEMap from "../pages/UAEMap";
-
+import All_country from "../pages/All_country";
 class SiteMain extends React.Component {
    
     render() {
@@ -22,8 +22,8 @@ class SiteMain extends React.Component {
             <Switch>
               <Route path="/" exact component={HomePage}></Route>
               <Route path="/climate-change" component={ClimateChange}></Route>
+              <Route path="/:fname" component={All_country}></Route>
               <Route path="/media-monitor" component={MediaMonitor}></Route>
-              <Route path="/world" component={World}></Route>
               <Route path="/florida" component={FloridaMap}></Route>
               <Route path="/haiti" component={HaitiMap}></Route>
               <Route path="/kolkata" component={KolkataMap}></Route>

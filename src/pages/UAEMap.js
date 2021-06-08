@@ -7,13 +7,13 @@ function UAEMap() {
       
         script.src = "assets/uae.js";
         script.type="text/javascript";
-        //script.async = true;
+        script.async = true;
         document.body.appendChild(script);
         return () => {
             document.body.removeChild(script);
           }
         
-      }, []);
+      }, );
     return (
         <>
         <div>

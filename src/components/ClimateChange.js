@@ -4,6 +4,7 @@ import {
 } from "react-router-dom";
 import LazyLoad from 'react-lazyload';
 import WwfClimatePetition from "./WwfClimatePetition";
+import  Countries from "./Countries";
 // import PlantATree from "./PlantATree";
 // import PlantTrees from "./PlantTrees";
 // import ActNowApp from "./ActNowApp";
@@ -54,9 +55,9 @@ const ClimateChange= () => {
           <div className="feature-chart">
                 <div className="chart" style={{padding:0}}>
                     {/* <p>Sea leve rise map will go here</p> */}
-                    <LazyLoad>
+                    
                     <World/>
-                    </LazyLoad>
+                    
                    
                 </div>
                 <div className="embed-chart">
@@ -132,6 +133,9 @@ const ClimateChange= () => {
                   </li>
                 </ul>
             </section>
+            <div>
+            <Countries/>
+            </div>
             <div className="entry-content">
                 <div className="grid-container-narrow major-incidents story">
                     <section className="x decade-1">

@@ -7,13 +7,13 @@ function BangladeshMap() {
       
         script.src = "assets/bangladesh.js";
         script.type="text/javascript";
-        //script.async = true;
+        script.async = true;
         document.body.appendChild(script);
         return () => {
             document.body.removeChild(script);
           }
         
-      }, []);
+      }, );
     return (<>
         <div>
             <div id="bangladesh_map" style = {{height:'90vh',width:"100%",maxHeight: "120%"}}></div>
