@@ -20,7 +20,11 @@ function All_country() {
         
       },);
     return (<>
-    <h1>Country- <span id="c_name">{fname}</span></h1>
+    <h1><span id="c_name">{fname}</span>Sea Level Rise Map</h1>
+    
+
+
+<p>See how the sea level is predicted to rise over the next 100 years in {fname} as a result of climate change.</p>
         <div>
 
         
