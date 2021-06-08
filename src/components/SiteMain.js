@@ -22,7 +22,7 @@ class SiteMain extends React.Component {
             <Switch>
               <Route path="/" exact component={HomePage}></Route>
               <Route path="/climate-change" component={ClimateChange}></Route>
-              <Route path="/:fname" component={All_country}></Route>
+              <Route path="/climate-change-:fname" component={All_country}></Route>
               <Route path="/media-monitor" component={MediaMonitor}></Route>
               <Route path="/florida" component={FloridaMap}></Route>
               <Route path="/haiti" component={HaitiMap}></Route>

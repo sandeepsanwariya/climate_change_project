@@ -9,7 +9,7 @@ function Countries() {
     <select id="country" name="country" onChange={(e) =>{
         
         const fname=e.target.value;
-        history.push("/"+fname)
+        history.push("/climate-change-"+fname)
     }} >
  <option value="American-Samoa">American-Samoa</option>
 <option value="United-States-Minor-Outlying-Islands">United-States-Minor-Outlying-Islands</option>
