@@ -20,13 +20,15 @@ function All_country() {
         
       },);
     return (<>
+    <h1>Country- <span id="c_name">{fname}</span></h1>
         <div>
+
         
              <div id="map_all" style = {{height:'700px',width:"100%"}}></div>
              
         </div>
         <div className="slidecontainer">
-            <h4>country- <span id="c_name">{fname}</span></h4>
+            
         <input type="range" min="0" max="143.7"  step="0.3"   style={{width: "30em"}}  className="slider" id="range"/>
         <p>Year: <span id="demo"></span></p>
       </div>
