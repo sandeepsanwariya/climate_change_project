@@ -14,6 +14,7 @@ import BangkokMap from "../pages/BangkokMap"
 import BangladeshMap from "../pages/BangladeshMap"
 import UAEMap from "../pages/UAEMap";
 import All_country from "../pages/All_country";
+import ClimateChange2 from "./ClimateChange2";
 class SiteMain extends React.Component {
    
     render() {
@@ -21,8 +22,8 @@ class SiteMain extends React.Component {
           <Router>
             <Switch>
               <Route path="/" exact component={HomePage}></Route>
-              <Route path="/climate-change" component={ClimateChange}></Route>
-              <Route path="/climate-change-:fname" component={All_country}></Route>
+              <Route path="/climate-change/" component={ClimateChange}></Route>
+              <Route path="/climate-change-:fname" component={ClimateChange2}></Route>
               <Route path="/media-monitor" component={MediaMonitor}></Route>
               <Route path="/florida" component={FloridaMap}></Route>
               <Route path="/haiti" component={HaitiMap}></Route>

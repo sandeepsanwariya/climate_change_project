@@ -22,7 +22,7 @@ import KolkataMap from "../pages/KolkataMap";
 
 
 
-const ClimateChange= () => {
+const ClimateChange2= () => {
 
       let element = document.getElementsByClassName('toggle-embed')[0];
 
@@ -37,8 +37,8 @@ const ClimateChange= () => {
       return (
         <main className="article campaign">
           <header className="entry-header">
-            <h1>Climate change: The life you know is about to end</h1>
-            <p>Scroll down to see how the world is going to change for the next generation.</p>
+            {/* <h1>Climate change: The life you know is about to end</h1>
+            <p>Scroll down to see how the world is going to change for the next generation.</p> */}
             <div className="mouse_scroll">
                 <div className="mouse">
                     <div className="wheel"></div>
@@ -61,8 +61,11 @@ const ClimateChange= () => {
                 <div className="chart" style={{padding:0}}>
                     {/* <p>Sea leve rise map will go here</p> */}
                     
-                    <World/>
+                    {/* <World/> */}
+                    <Switch>
+                    <Route path="/climate-change-:fname" component={All_country }  ></Route>            
                     
+                    </Switch>
                     <div>
                     <div>
                         <Countries/>
@@ -265,4 +268,4 @@ const ClimateChange= () => {
       );
   }
 
-export default ClimateChange
+export default ClimateChange2

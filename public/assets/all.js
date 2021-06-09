@@ -270,10 +270,17 @@ void main(void) {
 `
 
 		var tileSize = 256;
-		var con = document.getElementById("c_name");
         
+        var con = document.getElementById("c_name");
+        let country=con.innerHTML
 		var map = L.map('map_all').setView(data[con.innerHTML], 5);
-
+        // country=String(country)
+        country = country.replace( /-/g, " " )
+        console.log(country)
+        var con_name = document.getElementById("con_name");
+        con_name.innerHTML=country
+        var con_name2 = document.getElementById("con_name2");
+        con_name2.innerHTML=country
 		var mapboxAccessToken = 'pk.eyJ1Ijoic2FuZGVlcHNhbndhcml5YSIsImEiOiJja3A4ZmhvdGIwMTIyMm5zM2RxNWIya3h5In0.yuJS_cus0cl5UdGeQ-E5kg';
 
 		var base = L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/streets-v11/tiles/{z}/{x}/{y}?access_token=" + 'pk.eyJ1Ijoic2FuZGVlcHNhbndhcml5YSIsImEiOiJja3A4ZmhvdGIwMTIyMm5zM2RxNWIya3h5In0.yuJS_cus0cl5UdGeQ-E5kg', {
@@ -343,4 +350,4 @@ void main(void) {
             start.disabled=false;
             }
 
-        
+           
