@@ -19,13 +19,13 @@ function All_country() {
     
   },[] );
       
-          
+  const name=""
   let history =useHistory()
   const {fname} =useParams()
  
 
     return (<>
-    <h1><span id="con_name" >{fname}</span> Sea Level Rise Map</h1>
+    <h1><span id="con_name" ></span> Sea Level Rise Map</h1>
     <div hidden>
       <h1 id="c_name">{fname}</h1>
       <input id="loc_change" defaultValue={fname}  />
@@ -33,7 +33,7 @@ function All_country() {
     </div>
 
 
-<p>See how the sea level is predicted to rise over the next 100 years in <span id="con_name2" >{fname}</span> as a result of climate change.</p>
+<p>See how the sea level is predicted to rise over the next 100 years in <span id="con_name2" ></span> as a result of climate change.</p>
         <div>
 
         
@@ -52,9 +52,10 @@ function All_country() {
     <select id="country" name="country" onChange={(e) =>{
         
         const fname=e.target.value;
-        console.log("county",fname);
+        // console.log("county",fname);
         history.push("/climate-change-"+fname)
         // window.location.reload();
+        
     }} >
  <option value="Afghanistan">Afghanistan</option>
 <option value="Albania">Albania</option>

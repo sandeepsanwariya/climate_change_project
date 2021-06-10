@@ -309,6 +309,11 @@ void main(void) {
             map.flyTo(data[this.value],6)
             console.log("change",con.innerHTML)
             console.log(this.value)
+            country=this.value
+            country = country.replace( /-/g, " " )
+        console.log( "jsw",country)
+        con_name.innerHTML=country
+        con_name2.innerHTML=country
         }
         change_loc()
         
