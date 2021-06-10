@@ -11,7 +11,7 @@ function Countries() {
         const fname=e.target.value;
         console.log("county",fname);
         history.push("/climate-change-"+fname)
-        window.location.reload();
+        // window.location.reload();
     }} >
  <option value="Afghanistan">Afghanistan</option>
 <option value="Albania">Albania</option>

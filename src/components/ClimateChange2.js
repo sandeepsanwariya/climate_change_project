@@ -34,6 +34,8 @@ const ClimateChange2= () => {
       
       const {path,url} = useRouteMatch()
       
+      
+
       return (
         <main className="article campaign">
           <header className="entry-header">
@@ -68,7 +70,7 @@ const ClimateChange2= () => {
                     </Switch>
                     <div>
                     <div>
-                        <Countries/>
+                        {/* <Countries/> */}
         </div>
                     </div>
                 </div>

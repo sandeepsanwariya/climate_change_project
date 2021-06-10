@@ -143,7 +143,7 @@ const ClimateChange= () => {
                 </ul>
             </section>
             <div>
-            <Countries/>
+            {/* <Countries/> */}
             </div>
             <div className="entry-content">
                 <div className="grid-container-narrow major-incidents story">

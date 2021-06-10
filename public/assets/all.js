@@ -272,11 +272,13 @@ void main(void) {
 		var tileSize = 256;
         
         var con = document.getElementById("c_name");
-        let country=con.innerHTML
-		var map = L.map('map_all').setView(data[con.innerHTML], 5);
+        var country=""
+        country=con.innerHTML
+		var map = L.map('map_all').setView([0,0], 5);
+        
         // country=String(country)
         country = country.replace( /-/g, " " )
-        console.log(country)
+        console.log( "js",country)
         var con_name = document.getElementById("con_name");
         con_name.innerHTML=country
         var con_name2 = document.getElementById("con_name2");
@@ -297,8 +299,19 @@ void main(void) {
 			tileUrls: ['https://{s}.tiles.mapbox.com/v4/mapbox.terrain-rgb/{z}/{x}/{y}.pngraw?access_token=' + 'pk.eyJ1Ijoic2FuZGVlcHNhbndhcml5YSIsImEiOiJja3A4ZmhvdGIwMTIyMm5zM2RxNWIya3h5In0.yuJS_cus0cl5UdGeQ-E5kg']
 		}).addTo(map);
 		
+        function change_loc(){
+            con = document.getElementById("c_name");
+            map.flyTo(data[con.innerHTML],6)
+        }
+        var loc_change = document.getElementById("country");
+        loc_change.oninput=function (){
+            con = document.getElementById("c_name");
+            map.flyTo(data[this.value],6)
+            console.log("change",con.innerHTML)
+            console.log(this.value)
+        }
+        change_loc()
         
-
         var start = document.getElementById("start");
         var pause = document.getElementById("pause");
         pause.disabled=true;
@@ -309,6 +322,7 @@ void main(void) {
 		output.innerHTML = 2021
 		function ant(){
             var cl = Number(document.getElementById('range').value);
+        
             
             if(cl<143.7){
                 cl = cl + (0.3);
@@ -349,5 +363,3 @@ void main(void) {
             this.disabled=true;
             start.disabled=false;
             }
-
-           
